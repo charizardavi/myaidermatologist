@@ -1,0 +1,7 @@
+{
+  "name": "MyAIDermatologistWebApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

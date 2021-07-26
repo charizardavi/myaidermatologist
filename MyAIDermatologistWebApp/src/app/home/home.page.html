@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+      My AI Dermatologist
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+
+    <p>File type supported, .png</p>
+    <ion-button slot="end" (click)="takepic()">Take Picture Or Upload Image</ion-button>
+    <ion-img *ngIf="photoService.singlePhoto" src="{{ photoService.singlePhoto.base64 }}" style="height: 300px;"></ion-img>
+    <ion-card *ngIf="predictionResult" class="card">
+      <ion-card-title><p style="color: white; font-size: 50px; margin-top: 36px;">{{predictionResult}}</p></ion-card-title>
+    </ion-card>
+    <ion-button *ngIf="predictionResult" slot="end" (click)="showRemedies()">Go to Remedies</ion-button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Remedies And Medicine</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-title style="margin: 5px;">Home Remedies</ion-card-title>
+     <div>
+       <ul>
+         <li style="color: black;" *ngFor="let remedy of selectedRemedies.remedies">{{remedy}}</li>
+       </ul>
+     </div>
+    </ion-card>
+    <ion-card>
+      <ion-card-title  style="margin: 5px;">Off the Shelf Medicine</ion-card-title>
+      <div>
+        <ul>
+          <li style="color: black;" *ngFor="let medicine of selectedRemedies.medicine">{{medicine}}</li>
+        </ul>
+      </div>
+    </ion-card>
+</ion-content>
